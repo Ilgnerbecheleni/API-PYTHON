@@ -83,7 +83,7 @@ class Hotel (Resource):
 
         hotel = HotelModel(hotel_id, **dados)    # **kwargs desempacota todos os dados e cria instancia da classe
         try:
-            dhotel.save_hotel()
+            hotel.save_hotel()
         except:
             return {'message': 'erro ao tentar salvar hotel'}, 500
         return hotel.json(), 201  # created
